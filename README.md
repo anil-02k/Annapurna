@@ -1,3 +1,4 @@
+"Annapurna case study"
 Case Study: Annapurna – Reimagine Farms
 Problem Statement
 Smallholder farmers form the backbone of Indian agriculture, but they face persistent challenges: - Unpredictable monsoons and climate variability. - Rising input costs and low bargaining power. - Lack of access to modern technology compared to large agribusinesses. - Complex farm management decisions — from crop choice to irrigation — that directly impact income and sustainability. As a result, millions of small farmers in India struggle to earn a stable livelihood despite farming being central to India’s growth.
