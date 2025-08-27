@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Mapbox GL JS with Search Box</title>
+  
+  <!-- Mapbox GL JS CSS -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+  <!-- Mapbox Search JS CSS -->
+  <link href="https://api.mapbox.com/mapbox-assembly/v1.3.0/assembly.min.css" rel="stylesheet" />
+
+  <style>
+    body, html { margin: 0; padding: 0; height: 100%; }
+    #map { position: absolute; top: 40px; bottom: 0; width: 100%; }
+    #search-box-container {
+      position: absolute;
+      top: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      width: 50%;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="search-box-container"></div>
+  <div id="map"></div>
+
+  <!-- Mapbox GL JS -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+  <!-- Mapbox Search JS -->
+  <script id="search-js" defer src="https://api.mapbox.com/search-js/v1.3.0/web.js"></script>
+
+  <script>
+    const ACCESS_TOKEN = 'pk.eyJ1IjoiZW1pbmd1eWVuIiwiYSI6ImNrOGI2ZjRyODA1aHEzZG93cmFxaHR5d2IifQ.x8v_uFbdBanYgRtoKCGIOw'; // Replace this with your Mapbox access token
+    mapboxgl.accessToken = ACCESS_TOKEN;
+
+    // Initialize the map
+    const map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v12',
+      center: [-73.99209, 40.68933], // Initial map center [lng, lat]
+      zoom: 12
+    });
+
+    window.addEventListener('load', () => {
+      // Create the MapboxSearchBox control
+      const searchBox = new MapboxSearchBox();
+      searchBox.accessToken = ACCESS_TOKEN;
+      searchBox.options = {
+        types: 'address,poi',
+        proximity: [-73.99209, 40.68933] // bias search to this location
+      };
+      searchBox.mapboxgl = mapboxgl;  // Required for marker support
+      searchBox.marker = true;         // Show a marker for selected result
+
+      // Bind the search box to the map
+      searchBox.bindMap(map);
+
+      // Append search box to the container
+      document.getElementById('search-box-container').appendChild(searchBox);
+
+      // Listen for place selection
+      searchBox.addEventListener('retrieve', (event) => {
+        const selectedPlace = event.detail; // GeoJSON feature of selected location
+        const coords = selectedPlace.geometry.coordinates;
+        console.log('Selected place longitude:', coords[0]);
+        console.log('Selected place latitude:', coords[1]);
+      });
+    });
+  </script>
+</body>
+</html>
