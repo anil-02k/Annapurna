@@ -42,3 +42,53 @@ We collected a wide variety of data and learned a lot about agriculture
 Early Work 
 We are developing low-fidelity prototypes.
 
+Reusability & Documentation
+● Open-source & Modular: Frontend, backend, and analysis components are designed for
+independent reuse.
+● Clear Documentation: Comprehensive README includes setup guides, sample
+inputs/outputs, and contribution steps.
+● Easily Extensible: Future expansion for additional APIs, ML models, languages, or mobile
+applications is facilitated.
+● Broader Applications: Applicable beyond farming, extending to disaster management,
+smart irrigation, and urban planning.
+● Knowledge Transfer: Diagrams, wikis, and demo videos are provided for future team
+reference.
+Implementation Plan
+Hour 0 – 2: Setup & Team Split
+● Frontend: React, Tailwind, Mapbox setup.
+● Backend: Node.js, Express boilerplate setup.
+● Analysis: Define basic crop scoring formula.
+Hour 2 – 6: Core Foundations
+● Frontend: Map integration, basic crop selection UI.
+● Backend: Connect with Ambee API, define /getInsights endpoint.
+● Analysis: Simple scoring function (input: soil temp, humidity, weather; output: Crop
+Suitability Score 1-10).
+Hour 6 – 12: Functional Prototype
+● Integrate frontend ↔ backend.
+● User flow: Select plot → choose crop → analyze → get suitability score + weather
+summary.
+● Simple visual dashboard (color-coded scores).
+Hour 12 – 18: Advanced Features
+● Add expected yield/revenue estimation.
+● Integrate WeatherPlanner API.
+● Add multi-plot comparison.
+Hour 18 – 22: Testing & Refinement
+● Test on sample farms.
+● Fix integration issues.
+● Simplify UI.
+● (Optional) Add Hindi/regional language labels.
+Hour 22 – 24: Final Touches & Presentation
+● Build demo scenario.
+● Record short demo video.
+● Prepare 3-4 slide deck (Problem, Solution, Demo Flow, Impact).
+References
+● ScienceDirect (Elsevier) – https://www.sciencedirect.com
+○ Focus: Peer-reviewed agricultural research papers
+● Texas A&M AgriLife Research – https://agriliferesearch.tamu.edu
+○ Focus: Crop science, soil studies, and irrigation methods
+● UC Davis Agriculture & Natural Resources – https://ucanr.edu
+○ Focus: Global leader in agriculture & sustainability research
+● FarmProgress – https://www.farmprogress.com
+○ Focus: Practical insights and farming innovations
+● International Rice Research Institute (IRRI) – https://www.irri.org
+○ Focus: Rice farming, critical for Indian agriculture
