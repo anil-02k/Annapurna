@@ -1,0 +1,40 @@
+.language-selector-floating {
+  position: fixed;
+  top: 29px;
+  right: 29px;
+  z-index: 9999;
+}
+.language-selector-btn {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 10px 14px;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+.language-selector-dropdown {
+  margin-top: 8px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  min-width: 120px;
+}
+.language-selector-dropdown button {
+  background: none;
+  border: none;
+  padding: 8px 16px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 16px;
+}
+.language-selector-dropdown button.active {
+  background: #e6f7ff;
+  font-weight: bold;
+}
+.language-selector-dropdown button:hover {
+  background: #f0f0f0;
+}

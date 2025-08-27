@@ -1,0 +1,106 @@
+.Landing {
+  .go-btn.large {
+    width: 100%;
+    max-width: 440px;
+    padding: 16px 0;
+    font-size: 1.25rem;
+    background: linear-gradient(90deg, #4091DC 0%, #7DBDF9 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(64,145,220,0.15);
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    margin-top: 12px;
+  }
+  .go-btn.large:hover {
+    background: linear-gradient(90deg, #7DBDF9 0%, #4091DC 100%);
+    box-shadow: 0 4px 16px rgba(64,145,220,0.25);
+  }
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../../assets/ani.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px;
+  color: white;
+  font-family: 'Helvetica', sans-serif;
+
+  .space {
+    h3 {
+      color: white;
+      font-size: 24px;
+      margin-bottom: 0px;
+    }
+
+    margin: 40px 0px 10px 0px;
+  }
+
+  .label {
+    color: white;
+  }
+
+  .signup {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    width: 500px;
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    position: absolute;
+    top: 33%;
+    right: 10%;
+    h2 {
+      color: white;
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 48px;
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 300;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    overflow: hidden;
+    display: flex;
+    li {
+      padding: 0px 40px;
+      font-size: 22px;
+      font-weight: 400;
+    }
+
+    .about {
+      padding-left: 0px;
+    }
+  }
+
+  h1 {
+    font-size: 82px;
+    font-family: 'Helvetica';
+    font-weight: 600;
+    line-height: 90px;
+    position: absolute;
+    bottom: 5%;
+    color: white;
+  }
+
+  .search {
+    border-radius: 12px;
+  }
+
+  .ant-input-group-addon {
+    border-radius: 12px;
+  }
+
+  .ant-input-group {
+    opacity: 0.5;
+  }
+
+  .ant-input-group:hover {
+    transition-duration: 1s;
+    opacity: 0.9;
+  }
+}
